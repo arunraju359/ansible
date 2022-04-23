@@ -1,0 +1,6 @@
+-name :
+hosts: all
+tasks:
+    -name : Play 1
+      debug:
+       msg: printing the message for ansible playbook
