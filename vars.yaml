@@ -6,3 +6,8 @@
     - name: Printing the URL
       debug:
         msg: "{{URL}}"
+    - name: Printing the URL
+      debug:
+        msg: "{{URL}}"
+      vars:
+        URL: www.URL.com
