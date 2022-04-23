@@ -1,0 +1,8 @@
+- name: Play-1
+  hosts: all
+  vars:
+    URL: www.google.com
+  tasks:
+    - name: Printing the URL
+      debug:
+        msg: "{{URL}}"
