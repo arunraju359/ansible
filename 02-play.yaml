@@ -2,5 +2,5 @@
   hosts: all
   tasks:
   - name: Printing the message
-      debug:
-        msg: Hi Hello from respective servers
+    debug:
+      msg: Hi Hello from respective servers
