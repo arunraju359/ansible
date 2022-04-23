@@ -1,0 +1,6 @@
+- name: Play:1
+  hosts: all
+  tasks:
+  - name: Printing the message
+      debug:
+        msg: Hi Hello from respective servers
