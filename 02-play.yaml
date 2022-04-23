@@ -4,3 +4,12 @@
   - name: Printing the message
     debug:
       msg: Hi Hello from respective servers
+
+  - name: From Task1
+    debug:
+      msg: Hi from task 1 itself
+- name: Play:2
+  hosts: all
+  - name: Printing message from Play-2
+    debug:
+      msg: Hi from Play 2
