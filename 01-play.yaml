@@ -1,6 +1,10 @@
--name :
-hosts: all
-tasks:
-    -name : Play 1
+- name: Play1  ### name of the play 
+  hosts: all 
+  tasks:
+    - name: Print Hello from Play1 ### Name of the task  
       debug:
-       msg: printing the message for ansible playbook
+        msg: Hello from Task1 of Play1
+ 
+    - name: Print Hello from Play2 ### Name of the task  
+      debug:
+        msg: Hello from Task2 of Play1
