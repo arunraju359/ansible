@@ -1,6 +1,7 @@
 - name: Demo on cond
   hosts: all
   tasks:
-    debug:
-      msg: Hello from Amazon
-    when: ansible_distribution == "Amazon"
+    - name: printing os
+      debug:
+        msg: Hello from Amazon
+      when: ansible_distribution == "Amazon"
