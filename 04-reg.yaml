@@ -1,0 +1,5 @@
+- name: Play for Registers
+  hosts: all
+  tasks:
+    - name: Execute Shell
+      shell: uptime
