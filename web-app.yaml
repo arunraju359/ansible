@@ -1,13 +1,15 @@
-- name: Playbook to set up web, app and dp on a linux machine 
+- name: for webapp 
   hosts: all
   become: yes
   tasks:
-    - name: Installing HTTPD WebServer 
+    - name: installing httpd
       package:
-        name: httpd 
-        state: present  
+        name: httpd
+        status: present
 
-    - name: Copying the proxy file 
+    - name: copying the proxy.conf
       copy:  
         src: proxy.conf
         dest: /etc/httpd/conf.d/proxy.conf 
+
+    
