@@ -1,0 +1,28 @@
+- name: Play on tags
+  hosts: all
+  tasks:
+    - name: installation of web server
+      debug:
+        msg: Installed web
+      tags: web
+    - name: Checking web
+      debug:
+        msg: Webserver up or not
+      tags: web
+    - name: installation of app server
+      debug:
+        msg: Installed app
+      tags: app
+    - name: Checking app
+      debug:
+        msg: app up or not
+      tags: app
+    
+    - name: installation of db server
+      debug:
+        msg: Installed db
+      tags: db
+    - name: Checking db
+      debug:
+        msg: db up or not
+      tags: db
