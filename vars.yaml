@@ -13,9 +13,6 @@
         msg: "{{URL}}"
       vars:
         URL: www.URL.com
-    - name: Printing URL from the CLI
-      debug:
-        msg: The CLI var is {{URL_FROM_CLI}}
     - name: Printing from file a
       debug:
         msg: The var from file is {{FILE_URL}}
