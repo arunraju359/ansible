@@ -7,3 +7,9 @@
     - name: Printing the OUTPUT
       debug:
         msg: "{{OUT.stdout}}"
+    - name: Setting the status
+      set_fact:
+        STATUS: "{{OUT.rc}}"
+    - name: Printing the status
+      debug:
+        msg: the status is {{STATUS}}
