@@ -1,0 +1,9 @@
+- name: for privilege
+  hosts: all
+  tasks:
+    - name: for printing shell whoami
+      shell: whoami
+      register: OUT
+    - name: for printing the OUT
+      debug:
+        msg: "{{OUT}}"
