@@ -2,6 +2,8 @@
   hosts: all
   vars:
     URL: www.google.com
+  vars_file:
+    - proj-a.yaml
   tasks:
     - name: Printing the URL
       debug:
@@ -14,3 +16,6 @@
     - name: Printing URL from the CLI
       debug:
         msg: The CLI var is {{URL_FROM_CLI}}
+    - name: Printing from file a
+      debug:
+        msg: The var from file is {{FILE_URL}}
