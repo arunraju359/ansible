@@ -1,0 +1,15 @@
+- name: for webapp 
+  hosts: all
+  become: yes
+  tasks:
+    - name: installing httpd
+      package:
+        name: httpd
+        status: present
+
+    - name: copying the proxy.conf
+      copy:  
+        src: proxy.conf
+        dest: /etc/httpd/conf.d/proxy.conf 
+
+    
