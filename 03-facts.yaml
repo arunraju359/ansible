@@ -3,4 +3,4 @@
   tasks:
     - name: for the distro
       debug:
-        msg: {{ansible_distribution}}
+        msg: "{{ansible_distribution}}"
