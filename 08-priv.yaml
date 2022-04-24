@@ -4,6 +4,7 @@
     - name: for printing shell whoami
       shell: whoami
       register: OUT
+      become: yes
     - name: for printing the OUT
       debug:
         msg: "{{OUT}}"
