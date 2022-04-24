@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: installing httpd
+    - name: installing  HTTPD
       package:
         name: httpd
         status: present
@@ -12,4 +12,3 @@
         src: proxy.conf
         dest: /etc/httpd/conf.d/proxy.conf 
 
-    
