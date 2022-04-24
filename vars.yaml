@@ -1,8 +1,9 @@
-- name: Play-1 for vars
+- name: Play
   hosts: all
   vars:
     URL: www.google.com
-  vars_file: proj-a.yaml
+  vars_file: 
+    - proj-a.yaml
   tasks:
     - name: Printing the URL
       debug:
