@@ -2,10 +2,10 @@
   hosts: all
   become: yes
   tasks:
-    - name: installing  HTTPD
+    - name: installing HTTPD
       package:
         name: httpd
-        status: present
+        state: present
 
     - name: copying the proxy.conf
       copy:  
