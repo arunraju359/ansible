@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: for getting the templates
-      copy:
+      template:
         src: template.yaml
         dest: /home/ec2-user
