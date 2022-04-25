@@ -1,0 +1,5 @@
+- name: Play for the roles
+  hosts: all
+  become: yes
+  roles:
+    - webserver-role
