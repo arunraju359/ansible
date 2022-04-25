@@ -4,5 +4,5 @@
   tasks:
     - name: for getting the templates
       template:
-        src: template.yaml
-        dest: /home/ec2-user/template.yaml
+        src: template.conf
+        dest: /home/ec2-user/template.conf
