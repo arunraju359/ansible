@@ -1,5 +1,6 @@
 - name: Demoplay
   hosts: all
+  become: yes
   tasks:
       - name: Demo on adding block 
         blockinfile:
