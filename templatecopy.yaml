@@ -5,4 +5,4 @@
     - name: for getting the templates
       template:
         src: template.yaml
-        dest: /home/ec2-user
+        dest: /home/ec2-user/template.yaml
