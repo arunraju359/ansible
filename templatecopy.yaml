@@ -1,0 +1,8 @@
+- name: Copying the tempolate with passing the argument
+  hosts: all
+  become: yes
+  tasks:
+    - name: for getting the templates
+      copy:
+        src: template.yaml
+        dest: /home/ec2-user
