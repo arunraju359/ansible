@@ -4,7 +4,7 @@
   tasks:
       - name: Demo on adding block 
         blockinfile:
-          path: /home/ec2-user/template.conf 
+          path: /home/ec2-user/demo.cpy
           create: yes 
           block: |
             Match User ansible-agent
