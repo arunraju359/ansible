@@ -1,0 +1,10 @@
+- name: Demoplay
+  hosts: all
+  tasks:
+      - name: Demo on adding block 
+        blockinfile:
+          path: /home/centos/template.conf 
+          create: yes 
+          block: |
+            Match User ansible-agent
+            PasswordAuthentication no
