@@ -18,12 +18,14 @@
   get_url:
     url: "{{WAR_URL}}"
     dest: "{{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/webapps/"
+    mode: '0775'
   become_user: "{{APPUSER}}"
 
 - name: Dowloading the jar file
   get_url:
     url: "{{JAR_URL}}"
     dest: "{{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/lib/"
+    mode: '0775'
   become_user: "{{APPUSER}}"
 
 
