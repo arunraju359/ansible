@@ -41,8 +41,8 @@
     dest: /etc/systemd/system/multi-user.target.wants/
     mode: '0775'
 - name: Starting the startup
-  shell: {{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/bin/startup.sh
-  
+    shell: {{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/bin/startup.sh
+
 
 
 
