@@ -14,3 +14,16 @@
     remote_src: yes
   become_user: "{{APPUSER}}"
 
+  - name: Downloading the war file
+    get_url:
+      url: "{{WAR_URL}}"
+      dest: "{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/webapps"
+    become_user: "{{APPUSER}}"
+
+  - name: Dowloading the jar file
+    get_url:
+      url: "{{JAR_URL}}"
+      dest: "{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/lib"
+    become_user: "{{APPUSER}}"
+
+
