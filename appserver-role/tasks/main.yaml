@@ -7,9 +7,9 @@
     name: "{{APPUSER}}"
     comment: Application user
 
-- name: Downloading the tomacat App server from remote_server - yes
+- name: Downloading the tomacat App
   unarchive:
     src: "{{TOMCAT_URL}}" 
     dest: "{{APPUSERHOME}}"
-  remote_src: yes
+    remote_src: yes
 
