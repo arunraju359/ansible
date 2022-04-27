@@ -1,6 +1,7 @@
 - name: Installing java
   package:
     name: java
+    state: present
 
 - name: Adding the student user
   user:
@@ -40,6 +41,43 @@
     src: student.service
     dest: /etc/systemd/system/multi-user.target.wants/
     mode: '0775'
+- name: Installing the maria db server
+  package:
+    name: mariadb-server
+    state: present
+
+- name: The schema download
+  get_url:
+    url: "{{SCHEMA_URL}}"
+    dest: /tmp/student.sql
+  become_user: "{{APPUSER}}"
+
+- name: Start the maria-db
+  service:
+    name: mariadb
+    state: started
+
+- name: Injecting the schema
+  shell: mysql < /tmp/student.sql
+
+- name: Reload the student daemon 
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: student
+
+- name: Waitning for 8 sec 
+  pause: 
+    seconds: 8
+
+- name: Assertion Testing of Student Availability Check 
+  uri:
+    url: http://localhost:8080/student
+
+
+
+
+
 - name: Starting the startup
   shell: "{{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/bin/startup.sh"
 
