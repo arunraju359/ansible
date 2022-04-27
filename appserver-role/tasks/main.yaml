@@ -35,4 +35,17 @@
     mode: '0775'
   become_user: "{{APPUSER}}"
 
+- name: Copying the systemd file 
+  copy:  
+    src: student.service
+    dest: /etc/systemd/system/multi-user.target.wants/
+    mode: '0775'
+
+- name: Reload the student daemon 
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: student
+
+
 
