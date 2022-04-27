@@ -28,4 +28,11 @@
     mode: '0775'
   become_user: "{{APPUSER}}"
 
+- name: Copying the context.xml file
+  template:
+    src: context.xml
+    dest: "{{APPUSERHOME}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/"
+    mode: '0775'
+  become_user: "{{APPUSER}}"
+
 
