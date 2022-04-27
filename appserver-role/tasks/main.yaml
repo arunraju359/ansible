@@ -1,0 +1,15 @@
+- name: Installing java
+  package:
+    name: java
+
+- name: Adding the student user
+  user:
+    name: "{{APPUSER}}"
+    comment: Application user
+
+- name: Downloading the tomacat App server from remote_server - yes
+  unarchive:
+    src: "{{TOMCAT_URL}}" 
+    dest: "{{APPUSERHOME}}"
+  remote_src: yes
+
