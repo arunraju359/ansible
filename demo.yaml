@@ -1,0 +1,8 @@
+- name: task:1
+  hosts: all
+  tasks:
+    - name: Play:1
+      debug:
+        msg: Hello from Play1
+  
+  
